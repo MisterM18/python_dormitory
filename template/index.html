@@ -22,7 +22,7 @@
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
 
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
         rel="stylesheet">
@@ -37,45 +37,26 @@
         <!-- header section strats -->
         <header class="header_section">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                    <a class="navbar-brand" href="/">
-                        <span>
-                            Dormitory
-                        </span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/do">ใกล้ฉัน </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/portfolio"> ค้นหาจาก </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/contact">ลงประกาศ</a>
-                                </li>
-                            </ul>
-                            <div class="user_option">
-                                <a href="">
-                                    <img src="static/img/user.png" alt="">
-                                </a>
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+                    <div class="container-fluid">
+                     <a class="navbar-brand text-white" href="index.php">Welcome!</a>
+                       <button class="navbar-toggler white-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon "></span>
+                       </button>
+                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                         <li class="nav-item">
+                           <a class="nav-link active text-white" aria-current="page" href="#"><i class="bi bi-house-fill"></i>&nbsp;&nbsp; Dormitory</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link active text-white"  aria-current="page" href="board.php"><i class="bi bi-chat-square-text-fill"></i>&nbsp;&nbsp; WebBoard</a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link active text-white"  aria-current="page" href="login.php"><i class="bi bi-pencil-square"></i>&nbsp;&nbsp; Login</a>
+                         </li>
+                     </div>
+                   </div>
+                 </nav>
             </div>
         </header>
         <!-- end header section -->
