@@ -1,22 +1,57 @@
 body {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background: url(/static/img/background.jpg) ;
+  background: url(/static/img/background.jpg);
   background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
 }
-.navbar-backdrop-blur {
-  backdrop-filter: blur(30px);
+
+.navbar {
+  background: blur;
+  backdrop-filter: blur(40px);
+  font-size: 25px;
 }
+
 .navbar-nav .nav-link {
-  color: white; /* Set text color to white */
+  color: white;
+  /* Set text color to white */
 }
+
 .navbar {
   position: fixed;
   top: 0;
   right: 0;
   left: auto;
+}
+
+.card-img {
+  width: 200px;
+  /* Adjust the width as needed */
+  height: 200px;
+  /* Adjust the height as needed */
+  margin: auto;
+  /* Center the image horizontally */
+  object-fit: cover;
+}
+
+.card {
+  text-align: center;
+  background-color: wheat;
+  font-size: 25px;
+  border-radius: 15px;
+  margin: 40px;
+  height: 20px;
+}
+
+.card-body {
+  background-color: wheat;
+  backdrop-filter: blur(40px);
+}
+
+.card-header {
+  background-color: wheat;
+  backdrop-filter: blur(40px);
 }
