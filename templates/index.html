@@ -60,20 +60,22 @@
       <h5 class="card-title">Dormitory4</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button">Details</button>
+        <button class="btn btn-primary" type="button" >Details</button>
       </div>
     </div>  
   </div>
   <div class="card">
     <img src="/static/img/Domitory5.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
     <div class="card-body">
-      <h5 class="card-title">Dormitory3</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button">Details</button>
-      </div>
-    </div>  
-  </div>
+        <h5 class="card-title">Dormitory3</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="d-grid gap-2 col-md-6 mx-auto">
+            <!-- Use url_for to generate the URL for the other_page route -->
+            <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>
+
   <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
 
 

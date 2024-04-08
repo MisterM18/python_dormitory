@@ -6,7 +6,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 .navbar {
@@ -17,7 +16,6 @@ body {
 
 .navbar-nav .nav-link {
   color: white;
-  /* Set text color to white */
 }
 
 .navbar {
@@ -28,22 +26,23 @@ body {
 }
 
 .card-img {
-  width: 200px;
-  /* Adjust the width as needed */
-  height: 200px;
-  /* Adjust the height as needed */
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Adjust the maximum width as needed */
   margin: auto;
-  /* Center the image horizontally */
   object-fit: cover;
 }
-
+.card-text{
+  text-align: left;
+  font-size: 20px;
+}
 .card {
   text-align: center;
   background-color: wheat;
   font-size: 25px;
   border-radius: 15px;
-  margin: 200px;
-  height: 20px;
+  margin: 20px; /* Adjust margin for spacing */
+  padding: 20px; /* Adjust padding for spacing */
 }
 
 .card-body {
@@ -52,25 +51,41 @@ body {
 
 .card-img-container {
   position: relative;
-  width: 200px; /* Adjust this value as needed */
-  height: 200px; /* Adjust this value as needed */
+  width: 100%;
+  max-width: 200px; /* Adjust the maximum width as needed */
+  height: auto;
   overflow: hidden;
 }
 
 #goToTopBtn {
-  display: none; /* Initially hide the button */
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: gray;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  z-index: 1000; /* Ensure it appears above other elements */
+  z-index: 1000;
 }
 
 #goToTopBtn:hover {
-  background-color: #0056b3;
+  background-color:  gray;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+  /* Styles for tablets and larger devices */
+  .card {
+    margin: 50px; /* Adjust margin for larger screens */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Styles for desktops and larger devices */
+  .card {
+    margin: 100px; /* Adjust margin for larger screens */
+  }
 }
