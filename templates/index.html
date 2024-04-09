@@ -19,62 +19,153 @@
   <br>
   <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
-      <h1 class="text-white">Welcome To Dormitory</h1>
-    </div>
-  </div>
-
-  <!-- Main Content Area -->
-  <div class="card">
-    <img src="/static/img/Domitory1.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-    <div class="card-body">
-      <h5 class="card-title">Dormitory1</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button">Details</button>
-      </div>
-    </div>  
-  </div>
-  <div class="card">
-    <img src="/static/img/Domitory2.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-    <div class="card-body">
-      <h5 class="card-title">Dormitory2</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button">Details</button>
-      </div>
-    </div>  
-  </div>
-  <div class="card">
-    <img src="/static/img/Domitory3.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-    <div class="card-body">
-      <h5 class="card-title">Dormitory3</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button">Details</button>
-      </div>
-    </div>  
-  </div>
-  <div class="card">
-    <img src="/static/img/Domitory4.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-    <div class="card-body">
-      <h5 class="card-title">Dormitory4</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <div class="d-grid gap-2 col-md-6 mx-auto">
-        <button class="btn btn-primary" type="button" >Details</button>
-      </div>
-    </div>  
-  </div>
-  <div class="card">
-    <img src="/static/img/Domitory5.jpg" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-    <div class="card-body">
-        <h5 class="card-title">Dormitory5</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-grid gap-2 col-md-6 mx-auto">
-            <!-- Use url_for to generate the URL for the other_page route -->
-            <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
-        </div>
+        <h1 class="text-white" id="popup-text">Welcome To Dormitory</h1>
     </div>
 </div>
+
+
+  <!-- Main Content Area -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <!-- Add more indicators if needed -->
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory1.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory1.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory1.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory2.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory2.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory2.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add more carousel items if needed -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory3.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80">
+              <img class="card-img-top" src="/static/img/Domitory3.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-80 ">
+              <img class="card-img-top" src="/static/img/Domitory3.jpg" alt="Dormitory3">
+              <h5 class="card-title">Dormitory3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p>Monthly rent : 7000-8000 THB</p>
+              <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: gray;"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: gray;"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
   <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
 
@@ -84,6 +175,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <footer class="footer mt-auto py-3 text-white" >
+    <div class="container text-center">
+      <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
+      <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
+    </div>
+  </footer>
+  
 </body>
 
 </html>

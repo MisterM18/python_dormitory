@@ -13,6 +13,11 @@ body {
   backdrop-filter: blur(50px);
   font-size: 25px;
 }
+.footer {
+  background: blur;
+  backdrop-filter: blur(50px);
+  font-size: 15px;
+}
 
 .navbar-nav .nav-link {
   color: white;
@@ -70,6 +75,12 @@ body {
   cursor: pointer;
   z-index: 1000;
 }
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
 
 #goToTopBtn:hover {
   background-color:  rgb(86, 86, 86);
@@ -88,4 +99,24 @@ body {
   .card {
     margin: 100px; /* Adjust margin for larger screens */
   }
+}
+
+
+@keyframes popup {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+#popup-text {
+  animation: popup 1s ease-out forwards;
 }
