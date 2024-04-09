@@ -10,7 +10,7 @@ body {
 
 .navbar {
   background: blur;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(50px);
   font-size: 25px;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 .card {
   text-align: center;
-  background-color: wheat;
+  background-color: rgb(255, 255, 255);
   font-size: 25px;
   border-radius: 15px;
   margin: 20px; /* Adjust margin for spacing */
@@ -46,7 +46,7 @@ body {
 }
 
 .card-body {
-  background-color:#2B781F;
+  background-color:#ffffff;
 }
 
 .card-img-container {
@@ -62,7 +62,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: gray;
+  background-color: rgb(126, 126, 126);
   color: white;
   border: none;
   border-radius: 5px;
@@ -72,7 +72,7 @@ body {
 }
 
 #goToTopBtn:hover {
-  background-color:  gray;
+  background-color:  rgb(86, 86, 86);
 }
 
 /* Media queries for responsiveness */
