@@ -90,14 +90,14 @@ body {
 @media screen and (min-width: 768px) {
   /* Styles for tablets and larger devices */
   .card {
-    margin: 50px; /* Adjust margin for larger screens */
+    margin: 5px; /* Adjust margin for larger screens */
   }
 }
 
 @media screen and (min-width: 992px) {
   /* Styles for desktops and larger devices */
   .card {
-    margin: 100px; /* Adjust margin for larger screens */
+    margin: 20px; /* Adjust margin for larger screens */
   }
 }
 
