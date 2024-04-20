@@ -12,9 +12,9 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>DormitoryMain</title>
 </head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 <body>
-<br>
+  <br>
   {% include 'navbar.html' %}
   <br>
   <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
@@ -22,45 +22,42 @@
       <h1 class="text-white" id="popup-text">Welcome To Dormitory</h1>
     </div>
   </div>
-<br>
-<!-- Main Content Area -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <!-- Add carousel indicators here if needed -->
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row">
-        {% for item in data %}
-        <div class="col-md-4">
-          <div class="card h-80">
-            <img class="card-img-top" src="{{ item.imageUrl }}" alt="">
-            <!-- Use the image URL or file path from the database -->
-            <h5 class="card-title">{{ item.name }}</h5> <!-- Display name -->
-            <p>Price: {{ item.price }}</p> <!-- Display price -->
-            <p>Address: {{ item.address }}</p> <!-- Display address -->
-            <div class="d-grid gap-2 col-md-6 mx-auto">
-              <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+  <br>
+  <!-- Main Content Area -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          {% for item in data %}
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="{{ item.imageUrl }}" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">Price: {{ item.price }}</p>
+                <p class="card-text">Address: {{ item.address }}</p>
+                <a href="{{ url_for('other_page') }}" class="btn btn-primary">Details</a>
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-        
       </div>
+      <!-- Add more carousel items if needed -->
     </div>
-    <!-- Add more carousel items if needed -->
   </div>
-</div>
-<footer class="footer mt-auto py-3 text-white">
-  <div class="container text-center">
-    <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
-    <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
-  </div>
-</footer>
-<i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <a href="#" id="goToTopBtn" class="btn btn-primary" onclick="goToTop()"><i class="bi bi-arrow-up-short"></i></a>
+  <footer class="footer mt-auto py-3 text-white">
+    <div class="container text-center">
+      <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
+      <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
+    </div>
+  </footer>
+  <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/static/js/script.js"></script>
 </body>
 
 </html>
