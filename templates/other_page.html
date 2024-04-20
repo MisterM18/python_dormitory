@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Data from MongoDB</title>
+
+
+
+</head>
+
+<body>
+    <br>
+    {% include 'navbar.html' %}
+    <br><br><br><br><br>
+    <div>
+        <ul>
+            <div class="card">
+                <img src="{{ item['imageUrl'] }}" class="card-img-top" alt="{{ item['name'] }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item['name'] }}</h5>
+                    <p class="card-text">Description: {{ item['description'] }}</p>
+                    <p class="card-text">Address: {{ item['address'] }}</p>
+                    <p class="card-text">Monthly rent: {{ item['price'] }}</p>
+                    <p class="card-text">Contact: {{ item['contact'] }}</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
+    <footer class="footer mt-auto py-3 text-white">
+        <div class="container text-center">
+            <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
+            <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/js/script.js"></script>
+
+</html>

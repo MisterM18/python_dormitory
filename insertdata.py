@@ -41,3 +41,8 @@ result = collection.insert_many(dormitories)
 
 # Output the number of documents inserted
 print(f"Inserted {len(result.inserted_ids)} documents")
+
+
+
+connection_string = "mongodb+srv://inside162544:Z03ys2w6@pythondb.piijqhq.mongodb.net/?retryWrites=true&w=majority&appName=PythonDB"
+client = MongoClient(connection_string)
