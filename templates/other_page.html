@@ -20,13 +20,13 @@
 <body>
     <br>
     {% include 'navbar.html' %}
-    <br><br><br><br><br>
+    <br><br>
     <div>
         <ul>
             <div class="card">
-                <img src="{{ item['imageUrl'] }}" class="card-img-top" alt="{{ item['name'] }}">
+                <img src="{{ item['imageUrl'] }}" class="card-img" alt="{{ item['name'] }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ item['name'] }}</h5>
+                    <h3 class="card-title">{{ item['name'] }}</h3>
                     <p class="card-text">Description: {{ item['description'] }}</p>
                     <p class="card-text">Address: {{ item['address'] }}</p>
                     <p class="card-text">Monthly rent: {{ item['price'] }}</p>
@@ -35,15 +35,22 @@
                 </div>
             </div>
         </ul>
+        <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
+        <footer class="footer mt-auto py-3 text-white">
+            <div class="container text-center">
+                <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
+                <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
+            </div>
+        </footer>
     </div>
 
-    <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
+    <!-- <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
     <footer class="footer mt-auto py-3 text-white">
         <div class="container text-center">
             <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
             <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
