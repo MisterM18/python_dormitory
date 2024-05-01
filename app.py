@@ -9,7 +9,7 @@ app = Flask(__name__)
 connection_string = "mongodb+srv://inside162544:Z03ys2w6@pythondb.piijqhq.mongodb.net/?retryWrites=true&w=majority&appName=PythonDB"
 client = MongoClient(connection_string)
 
-ITEMS_PER_PAGE = 6
+ITEMS_PER_PAGE = 100
 
 
 @app.route("/")
