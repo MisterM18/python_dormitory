@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, url_for
 from pymongo import MongoClient
 from bson import ObjectId
 
+
 app = Flask(__name__)
-4
+
 # เชื่อมต่อ MongoDB
 connection_string = "mongodb+srv://inside162544:Z03ys2w6@pythondb.piijqhq.mongodb.net/?retryWrites=true&w=majority&appName=PythonDB"
 client = MongoClient(connection_string)
