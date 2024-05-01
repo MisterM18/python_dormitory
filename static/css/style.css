@@ -5,7 +5,8 @@ body {
   background-blend-mode: multiply;
   background-position: center;
   background-size:cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background: container;
 }
 
 .navbar {
@@ -65,6 +66,13 @@ body {
 
 .card-body {
   background-color: #ffffff;
+}
+
+.container{
+  text-align: center;
+  color: #ffffff;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .card-img-container {
@@ -148,4 +156,36 @@ body {
 
 #popup-text {
   animation: popup 1s ease-out forwards;
+}
+
+.item {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 10px;
+  margin: 10px 5px 10px 5px; /* Adjusted margin for top, right, bottom, and left */
+  height: 100%; /* Ensures all items are of equal height */
+  backdrop-filter: blur(100px); /* Apply blur effect */
+  background-color: transparent; /* Adjust background color and opacity */
+  color: #ffffff;
+}
+
+
+
+#goBackBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Adjusted from right to left */
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+.input{
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }

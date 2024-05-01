@@ -51,6 +51,13 @@ def add_data_page():
 
 
 
+@app.route("/update")
+def update():
+    db = client["DormitoryDB"]
+    collection = db["DDB"]
+    items = collection.find({}, {"name": 1, "price": 1, "address": 1,"imageUrl":1,"description":1,"contact":1})
+    return render_template("update.html", items=items)
+
 
 @app.route("/other_page/<item_id>")
 def other_page(item_id):
@@ -175,6 +182,55 @@ def Dormitory_update(id):
             return jsonify({"error": "Document not found"}), 404
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+from flask import redirect
+
+@app.route("/update_item/<item_id>", methods=["GET", "POST"])
+def update_item(item_id):
+    db = client["DormitoryDB"]
+    collection = db["DDB"]
+    if request.method == "GET":
+        # Retrieve item from database using item_id
+        item = collection.find_one({"_id": ObjectId(item_id)})
+        if item:
+            return render_template("update_form.html", item=item)
+        else:
+            return "Item not found"
+    elif request.method == "POST":
+        try:
+            if request.form.get("action") == "delete":
+                # Delete the item from the database
+                result = collection.delete_one({"_id": ObjectId(item_id)})
+                if result.deleted_count == 1:
+                    # Redirect back to update.html upon successful deletion
+                    return redirect(url_for('update'))
+                else:
+                    return "Failed to delete item"
+            else:
+                # Handle form submission for updating item
+                # Retrieve updated data from form
+                updated_data = {
+                    "name": request.form["name"],
+                    "price": int(request.form["price"]),  # Convert to int if necessary
+                    "address": request.form["address"],
+                    "imageUrl": request.form["imageUrl"],
+                    "description": request.form["description"],
+                    "contact": request.form["contact"],
+                    # Add more fields as needed
+                }
+                # Update item in database
+                result = collection.update_one({"_id": ObjectId(item_id)}, {"$set": updated_data})
+                if result.modified_count == 1:
+                    # Redirect back to update.html upon successful update
+                    return redirect(url_for('update'))
+                else:
+                    return "Failed to update item"
+        except Exception as e:
+            # Handle any exceptions that occur during the update or delete operation
+            return f"Error: {str(e)}"
+
+
 
 
 if __name__ == "__main__":
