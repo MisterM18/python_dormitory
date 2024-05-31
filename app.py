@@ -87,6 +87,7 @@ def dormitory_add_post():
         price = data["price"]
         description = data["description"]
         contact = data["contact"]
+        numberOfRoomsAvailable = data.get("numberOfRoomsAvailable", 0)  # Default to 0 if not provided
 
         # Create a dictionary to store the data
         dormitory_data = {
@@ -96,6 +97,7 @@ def dormitory_add_post():
             "price": price,
             "description": description,
             "contact": contact,
+            "numberOfRoomsAvailable": numberOfRoomsAvailable
         }
 
         # Connect to the MongoDB database and collection
@@ -121,6 +123,7 @@ def dormitory_add_post():
         # Handle missing fields
         error_message = f"Missing required field: {e}"
         return jsonify({"error": error_message}), 400
+
 
 
 # use for Detele Data base from Object_id #
