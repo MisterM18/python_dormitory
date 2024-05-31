@@ -220,7 +220,7 @@ def update_item(item_id):
                     "imageUrl": request.form["imageUrl"],
                     "description": request.form["description"],
                     "contact": request.form["contact"],
-                    # Add more fields as needed
+                    "numberOfRoomsAvailable": int(request.form["numberOfRoomsAvailable"])  # Add this line
                 }
                 # Update item in database
                 result = collection.update_one({"_id": ObjectId(item_id)}, {"$set": updated_data})
@@ -232,8 +232,6 @@ def update_item(item_id):
         except Exception as e:
             # Handle any exceptions that occur during the update or delete operation
             return f"Error: {str(e)}"
-
-
 
 
 if __name__ == "__main__":
