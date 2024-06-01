@@ -23,7 +23,7 @@
         <div class="row">
             {% for item in items %}
             <div class="col-md-4">
-                <div class="item">
+                <div class="item mb-4 pb-4 border-bottom">
                     <h3>{{ item.name }}</h3>
                     <img src="{{ item.imageUrl }}" class="card-img-top" alt="{{ item.name }}">
                     <p>Price: {{ item.price }}</p>
@@ -35,11 +35,10 @@
                         <button type="submit" class="btn btn-primary"><i class="bi bi-house-gear"></i>&nbsp;Update</button>
                     </form>
                 </div>
-            </div>
+            </div>            
             {% endfor %}
         </div>
     </div>
-
 
     <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
 

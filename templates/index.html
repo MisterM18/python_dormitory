@@ -46,6 +46,7 @@
               <h3 >{{ item.name }}</h3>
               <p >Address : {{ item.address }}</p>
               <p >Monthly rent: {{ item.price }}</p>
+              <p >Available Now : {{ item.numberOfRoomsAvailable }} / {{ item.numberOfRoomsAvailable}}</p>
               <a href="{{ url_for('other_page', item_id=item['_id']) }}" class="btn btn-primary">Details</a>
             </div>
           </div>
@@ -69,6 +70,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="/static/js/script.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 
 </html>
