@@ -13,14 +13,13 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
   <br>
   {% include 'navbar.html' %}
   <br>
   <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
     <div class="content text-center">
-      <h1 class="text-white" id="popup-text">Welcome To Dormitory</h1>  
+      <h1 class="text-white" id="popup-text">Welcome To Dormitory</h1>
     </div>
   </div>
   <br>
@@ -31,35 +30,43 @@
     </div>
   </div>
 
-
-
-
-
-  <div class="carousel-inner mb-5"> <!-- Add bottom margin to prevent overlap -->
-    <div class="carousel-item active">
-      <div class="row">
-        {% for item in items %}
-        <div class="col-md-4">
-          <div class="item">
-            <img src="{{ item.imageUrl }}" class="card-img-top" alt="{{ item.name }}">
-            <div ">
-              <h3 >{{ item.name }}</h3>
-              <p >Address : {{ item.address }}</p>
-              <p >Monthly rent: {{ item.price }}</p>
-              <p >Available Now : {{ item.numberOfRoomsAvailable }} / {{ item.numberOfRoomsAvailable}}</p>
-              <a href="{{ url_for('other_page', item_id=item['_id']) }}" class="btn btn-primary">Details</a>
+  <div id="itemCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      {% for item in items|batch(3) %}
+      <div class="carousel-item {% if loop.first %}active{% endif %}">
+        <div class="container">
+          <div class="row">
+            {% for sub_item in item %}
+            <div class="col-md-4 mb-5 custom-card">
+              <div class="card">
+                <img src="{{ sub_item.imageUrl }}" class="card-img-top" alt="{{ sub_item.name }}">
+                <div class="card-body">
+                  <h3 class="card-title">{{ sub_item.name }}</h3>
+                  <p class="card-text">Address: {{ sub_item.address }}</p>
+                  <p class="card-text">Monthly rent: {{ sub_item.price }}</p>
+                  <p class="card-text">Available Now: {{ sub_item.numberOfRoomsAvailable }} / {{ sub_item.numberOfRoomsAvailable }}</p>
+                  <a href="{{ url_for('other_page', item_id=sub_item['_id']) }}" class="btn btn-primary">Details</a>
+                </div>
+              </div>
             </div>
+            {% endfor %}
           </div>
         </div>
-        {% endfor %}
-      </div> <!-- Move this closing tag outside of the loop -->
+      </div>
+      {% endfor %}
     </div>
+    <a class="carousel-control-prev" href="#itemCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#itemCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  
-<br><br><br><br>
-  </div>
+
   <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
-  <footer class="footer mt-auto py-2 text-white">
+  <footer class="footer mt-auto py-1 text-white">
     <div class="container text-center">
       <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
       <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>

@@ -1,93 +1,78 @@
 body {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background: url(/static/img/background.jpg);
+  background: url(/static/img/beautiful-mountains-landscape.jpg);
   background-blend-mode: multiply;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-repeat: repeat;
-  background: container;
 }
 
 .navbar {
-  background: blur;
   backdrop-filter: blur(50px);
   font-size: 25px;
-}
-
-.item {
-  margin-bottom: 20px; /* Adjust the value as needed */
-  padding-bottom: 20px; /* Optional: adds padding inside the item */
-  border-bottom: 1px solid #ddd; /* Optional: adds a bottom border to visually separate items */
-}
-
-.footer {
-  background: blur;
-  backdrop-filter: blur(50px);/* Apply blur effect */
-  font-size: 15px;
-  position: fixed; /* Fixed position at the bottom of the viewport */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 20px; /* Add padding for better readability */
-}
-
-
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar {
   position: fixed;
   top: 0;
   right: 0;
   left: auto;
 }
 
-.card-img {
-  width: 100%;
-  height: auto;
-  max-width:100%;
-  /* Adjust the maximum width as needed */
-  margin: auto;
-  object-fit: cover;
+.navbar-nav .nav-link {
+  color: white;
 }
 
-.card-text {
-  text-align: left;
-  font-size: 20px;
+.item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 10px;
+  margin: 10px 5px;
+  height: 100%;
+  backdrop-filter: blur(100px);
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.footer {
+  backdrop-filter: blur(100px);
+  font-size: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+  color: w;
 }
 
 .card {
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-  font-size: 25px;
+  background-color: transparent;
+  backdrop-filter: blur(100px);
   border-radius: 15px;
   margin: 20px;
-  /* Adjust margin for spacing */
   padding: 20px;
-  /* Adjust padding for spacing */
 }
 
 .card-body {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
-.container{
+.container {
   text-align: center;
-  color: #ffffff;
-  margin: 10px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
+  margin: 10px;
+  padding: 10px;
+  color: black;
 }
 
-.card-img-container {
-  position:contain;
-  width: 100%;
-  max-width: 200px;
-  /* Adjust the maximum width as needed */
+.card-img-top {
   height: auto;
-  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px; /* Limit the height of the image */
 }
 
 #goToTopBtn {
@@ -104,56 +89,68 @@ body {
   z-index: 1000;
 }
 
-.card-img-top {
-  height: 200px; /* ปรับความสูงเป็นค่าคงที่ */
-  object-fit: cover; /* ครอบคลุมพื้นที่ของอิลิเมนต์ */
-  width: 100%; /* ทำให้ภาพเต็มขนาด */
-}
-
-
-
 #goToTopBtn:hover {
   background-color: rgb(86, 86, 86);
 }
 
 /* Media queries for responsiveness */
 @media screen and (min-width: 768px) {
-  /* Styles for tablets and larger devices */
   .card {
-    margin: 2px; /* ปรับขนาดของขอบ */
+    margin: 2px;
   }
+
+  .ContentCard {
+    width: 600px;
+    height: 800px;
+  }
+
   .card-img-top {
-    width: 200px; /* กำหนดความกว้างเป็นค่าคงที่ */
-    height: 200px; /* กำหนดความสูงเป็นค่าคงที่ */
-    object-fit: cover; /* ครอบคลุมพื้นที่ของอิลิเมนต์ */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 @media screen and (min-width: 992px) {
-  /* Styles for desktops and larger devices */
   .card {
-    margin: 40px; /* ปรับขนาดของขอบ */
+    width: 350px;
+    height: 700px;
+    margin: 10px;
+    padding: 5px;
+    backdrop-filter: blur(100px);
+    background-color: white;
   }
+
   .card-img-top {
-    width: 200px; /* กำหนดความกว้างเป็นค่าคงที่ */
-    height: 200px; /* กำหนดความสูงเป็นค่าคงที่ */
-    object-fit: cover; /* ครอบคลุมพื้นที่ของอิลิเมนต์ */
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 5px;
+    height: 100%;
+    backdrop-filter: blur(100px);
+    background-color: transparent;
+    color: #ffffff;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 }
 
-
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @keyframes popup {
   0% {
     transform: scale(0.8);
     opacity: 0;
   }
-
   50% {
     transform: scale(1.1);
     opacity: 1;
   }
-
   100% {
     transform: scale(1);
     opacity: 1;
@@ -164,25 +161,15 @@ body {
   animation: popup 1s ease-out forwards;
 }
 
-.item {
-  text-align: center;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 10px;
-  margin: 10px 5px 10px 5px; /* Adjusted margin for top, right, bottom, and left */
-  height: 100%; /* Ensures all items are of equal height */
-  backdrop-filter: blur(100px); /* Apply blur effect */
-  background-color: transparent; /* Adjust background color and opacity */
-  color: #ffffff;
+.form-label, .form-control, h1, h4, button {
+  color: black;
 }
-
-
 
 #goBackBtn {
   display: none;
   position: fixed;
   bottom: 20px;
-  left: 20px; /* Adjusted from right to left */
+  left: 20px;
   background-color: red;
   color: white;
   border: none;
@@ -191,7 +178,8 @@ body {
   cursor: pointer;
   z-index: 100;
 }
-.input{
-  margin: 10px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
+
+.input {
+  margin: 10px;
+  padding: 10px;
 }
