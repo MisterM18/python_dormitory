@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Booking System</title>
+</head>
+<body>
+    <h1>Booking System</h1>
+    <form id="bookingForm">
+        <input type="text" id="name" name="name" placeholder="Name" required><br>
+        <input type="text" id="dormitory_id" name="dormitory_id" placeholder="Dormitory ID" required><br>
+        <input type="date" id="start_date" name="start_date" required><br>
+        <input type="date" id="end_date" name="end_date" required><br>
+        <input type="text" id="contact" name="contact" placeholder="Contact" required><br>
+        <button type="submit">Book Now</button>
+    </form>
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            fetch('http://localhost:5002/booking/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
