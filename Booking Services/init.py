@@ -1,5 +1,11 @@
-from flask import Blueprint
+from flask import Flask
+from flask_pymongo import PyMongo
+from config import Config
 
-booking_bp = Blueprint('booking', __name__)
+app = Flask(__name__)
+app.config["MONGO_URI_DORMITORY"] = Config.MONGO_URI_DORMITORY
+mongo_dormitory = PyMongo(app, uri="MONGO_URI_DORMITORY")
+app.config["MONGO_URI_BOOKING"] = Config.MONGO_URI_BOOKING
+mongo_booking = PyMongo(app, uri="MONGO_URI_BOOKING")
 
-from . import routes
+from app import routes
