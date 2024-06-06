@@ -24,7 +24,7 @@ body {
 .item {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
   text-align: center;
   border-radius: 10px;
   border: 2px solid white;
@@ -50,8 +50,9 @@ body {
 }
 
 .card {
+  color: white;
   background-color: transparent;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(200px);
   border-radius: 15px;
   margin: 20px;
   padding: 20px;
@@ -62,13 +63,14 @@ body {
 }
 
 .container {
-  text-align: center;
+  text-align: left;
   margin: 10px;
   padding: 10px;
   color: black;
 }
 
 .card-img-top {
+  border-radius: 20px;
   height: auto;
   object-fit: cover;
   width: 100%;
@@ -94,39 +96,51 @@ body {
 }
 
 /* Media queries for responsiveness */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .card {
-    margin: 2px;
+    color: white;
+    margin: 5px;
   }
 
   .ContentCard {
-    width: 600px;
+    width: 300px;
     height: 800px;
   }
+ 
 
   .card-img-top {
-    width: 100%;
-    height: 100%;
+    border-radius: 20px;
+    width: 20%;
+    height: 20%;
     object-fit: cover;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
   .card {
+    text-align: left;
     width: 350px;
+    height: 600px;
+    margin: 10px;
+    padding: 5px;
+    backdrop-filter: blur(100px);
+    background-color: white;
+  }
+  .contentDTR{
+    text-align: left;
+    width: 600px;
     height: 700px;
     margin: 10px;
     padding: 5px;
     backdrop-filter: blur(100px);
     background-color: white;
   }
-
   .card-img-top {
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px 5px;
-    height: 100%;
+    height: 50%;
     backdrop-filter: blur(100px);
     background-color: transparent;
     color: #ffffff;

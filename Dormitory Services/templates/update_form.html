@@ -20,7 +20,7 @@
     <br>
     <br><br><br><br>
     <div class="container">
-        <h1>Update Item</h1>
+        <h1 style="color: white;">Update Item</h1><br>
         <form id="updateForm" action="{{ url_for('update_item', item_id=item._id) }}" method="post">
             <div class="form-group">
                 <h4 for="name">Name :</h4>
@@ -65,12 +65,9 @@
 
     <br>
     <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
-    <footer class="footer mt-auto py-2 text-white">
-        <div class="container text-center">
-            <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
-            <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
-        </div>
-    </footer>
+    <footer class="footer text-white" style="height: 70px; line-height: 70px;">
+        <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
+      </footer>
 
     <script>
         // Add event listener to the delete button

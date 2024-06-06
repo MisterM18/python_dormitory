@@ -13,6 +13,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
   <br>
   {% include 'navbar.html' %}
@@ -26,7 +27,8 @@
   <div class="container">
     <div class="d-flex justify-content-center">
       <a href="{{ url_for('add_data_page') }}" class="btn btn-primary"><i class="bi bi-house-add"></i>&nbsp;Add Data</a>
-      <a href="{{ url_for('update') }}" class="btn btn-warning ml-3"><i class="bi bi-house-gear"></i>&nbsp;Update & Delete</a>
+      <a href="{{ url_for('update') }}" class="btn btn-warning ml-3"><i class="bi bi-house-gear"></i>&nbsp;Update &
+        Delete</a>
     </div>
   </div>
 
@@ -37,14 +39,15 @@
         <div class="container">
           <div class="row">
             {% for sub_item in item %}
-            <div class="col-md-4 mb-5 custom-card">
-              <div class="card">
+            <div class="col-md-4 mb-5">
+              <div class="card" style="background-color: transparent;backdrop-filter: blur(100px);color: white;">
                 <img src="{{ sub_item.imageUrl }}" class="card-img-top" alt="{{ sub_item.name }}">
                 <div class="card-body">
                   <h3 class="card-title">{{ sub_item.name }}</h3>
                   <p class="card-text">Address: {{ sub_item.address }}</p>
                   <p class="card-text">Monthly rent: {{ sub_item.price }}</p>
-                  <p class="card-text">Available Now: {{ sub_item.numberOfRoomsAvailable }} / {{ sub_item.numberOfRoomsAvailable }}</p>
+                  <p class="card-text">Available Now: {{ sub_item.numberOfRoomsAvailable }} / {{
+                    sub_item.numberOfRoomsAvailable }}</p>
                   <a href="{{ url_for('other_page', item_id=sub_item['_id']) }}" class="btn btn-primary">Details</a>
                 </div>
               </div>
@@ -66,12 +69,10 @@
   </div>
 
   <i class="bi bi-arrow-up-circle-fill" id="goToTopBtn" onclick="goToTop()"></i>
-  <footer class="footer mt-auto py-1 text-white">
-    <div class="container text-center">
-      <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
-      <span class="text">Dormitory Website, Max Mongkol Thailand 4, 20000 Dubrovnik</span>
-    </div>
+  <footer class="footer text-white" style="height: 70px; line-height: 70px;">
+    <span class="text">All content © 2024 The Microservice, ECT-R21</span><br>
   </footer>
+
   <!-- Bootstrap and custom scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
